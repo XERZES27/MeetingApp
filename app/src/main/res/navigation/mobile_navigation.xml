@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/mobile_navigation"
+            app:startDestination="@id/currentMeetingFragment">
+
+    <fragment
+            android:id="@+id/currentMeetingFragment"
+            android:name="com.example.meetingapp.UI.Meetings.CurrentMeetingFragment"
+            android:label="current_meeting_fragment"
+            tools:layout="@layout/current_meeting_fragment"/>
+    <fragment
+            android:id="@+id/allMeetingsFragment"
+            android:name="com.example.meetingapp.UI.Meetings.allMeetingsFragment"
+            android:label="all_meetings_fragment"
+            tools:layout="@layout/all_meetings_fragment"/>
+    <fragment
+            android:id="@+id/detailMeetingFragment"
+            android:name="com.example.meetingapp.UI.Meetings.detailMeetingFragment"
+            android:label="detail_meeting_fragment"
+            tools:layout="@layout/detail_meeting_fragment"/>
+    <fragment
+            android:id="@+id/settingFragment"
+            android:name="com.example.meetingapp.UI.Meetings.SettingFragment"
+            android:label="SettingFragment"/>
+</navigation>
