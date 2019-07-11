@@ -7,6 +7,12 @@
         android:layout_height="wrap_content"
         tools:context=".UI.Meetings.detailMeetingFragment">
 
+    <com.google.android.material.button.MaterialButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Users"
+            />
+
     <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
@@ -16,7 +22,7 @@
                 android:id="@+id/recyclerView"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                app:items="@{viewModel.items}"
+                app:items=" "
                 >
         </androidx.recyclerview.widget.RecyclerView>
 
