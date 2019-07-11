@@ -24,4 +24,9 @@
             android:id="@+id/settingFragment"
             android:name="com.example.meetingapp.UI.Meetings.SettingFragment"
             android:label="SettingFragment"/>
+    <fragment
+            android:id="@+id/signInFragment"
+            android:name="com.example.meetingapp.UI.Meetings.signInFragment"
+            android:label="sign_in_fragment"
+            tools:layout="@layout/sign_in_fragment"/>
 </navigation>
