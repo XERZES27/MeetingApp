@@ -7,7 +7,7 @@ import com.example.meetingapp.data.Message
 @Dao
 interface MessageDao {
 
-    @Query("select * from messages where meeting_id = :meeting_id order by id")
+    @Query("select * from messages  order by id")
     fun getAllMessages( meeting_id : Long) : LiveData<List<Message>>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)

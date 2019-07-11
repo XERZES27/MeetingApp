@@ -11,6 +11,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat.getSystemService
+import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import com.example.meetingapp.Items.meetingItem
 
@@ -19,6 +20,8 @@ import com.example.meetingapp.ViewModels.MeetingViewModel
 import com.example.meetingapp.data.Meeting
 
 class allMeetingsFragment : Fragment() {
+
+    //private lateinit var binding: FragmentallMeetingBinding
 
     companion object {
         fun newInstance() = allMeetingsFragment()
@@ -39,32 +42,35 @@ class allMeetingsFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+//        DataBindingUtil.setContentView<R.layout.all_meetings_fragment>(
+//            this, R.layout.activity_main
+//        ).apply {
+//            this.setLifecycleOwner(this@MainActivity)
+//            this.viewmodel = meetingViewModel}
+
+//        binding = DataBindingUtil.inflate(inflater, R.layout.all_meetings_fragment, container, false)
+//
+//        binding.setLifecycleOwner(this)
+//
+//        return binding.root
         return inflater.inflate(R.layout.all_meetings_fragment, container, false)
+
+
+
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         viewModel = ViewModelProviders.of(this).get(MeetingViewModel::class.java)
-        bindUI()
-
-    }
-    private fun bindUI(){
-
-        val allMeetings = viewModel.getAllMeeting
-        allMeetings.observe(this, Observer {
-            val obj = it.body()
-            initRecyclerView(obj!!)
-
-        })
-
 
 
     }
-    private fun List<Meeting>.tomeetingItem() : List<meetingItem> {
-        return this.map {
-            meetingItem(it)
-        }
-    }
+
+//    private fun List<Meeting>.tomeetingItem() : List<meetingItem> {
+//        return this.map {
+//            meetingItem(it)
+//        }
+//    }
 
     fun initRecyclerView(items:List<Meeting>){
 

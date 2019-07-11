@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-                                                   android:layout_width="match_parent"
-                                                   android:layout_height="wrap_content"
-                                                   android:minHeight="?listPreferredItemHeightLarge"
-                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
-                                                   xmlns:tools="http://schemas.android.com/tools"
-                                                   android:layout_margin="4dp"
-                                                   app:cardCornerRadius="4dp">
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?listPreferredItemHeightLarge"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_margin="4dp"
+        app:cardCornerRadius="4dp">
 
     <data>
 
         <variable
-                name="title"
+                name="name"
                 type="String" />
         <variable
-                name="description"
+                name="email"
                 type="String"/>
 
     </data>
@@ -41,7 +41,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.0"
-                android:text = "@{title}" />
+                android:text = "name" />
 
         <TextView
                 android:id="@+id/textView_description"
@@ -59,7 +59,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.916"
-                android:text = "@{description}"
+                android:text = "email"
                 tools:text="Description"/>
 
 
@@ -67,3 +67,4 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </layout>
+
