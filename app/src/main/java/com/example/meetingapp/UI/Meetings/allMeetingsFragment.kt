@@ -17,6 +17,7 @@ import com.example.meetingapp.Items.meetingItem
 
 import com.example.meetingapp.R
 import com.example.meetingapp.ViewModels.MeetingViewModel
+import com.example.meetingapp.ViewModels.PollViewModel
 import com.example.meetingapp.data.Meeting
 
 class allMeetingsFragment : Fragment() {
@@ -37,6 +38,7 @@ class allMeetingsFragment : Fragment() {
     }
 
     private lateinit var viewModel: MeetingViewModel
+    private lateinit var pollViewModel: PollViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -62,6 +64,8 @@ class allMeetingsFragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         viewModel = ViewModelProviders.of(this).get(MeetingViewModel::class.java)
+        pollViewModel = ViewModelProviders.of(this).get(PollViewModel::class.java)
+
 
 
     }

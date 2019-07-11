@@ -7,6 +7,13 @@
         android:layout_height="match_parent"
         tools:context=".UI.Meetings.userFrament">
 
+    <data>
+
+        <variable
+                name="viewModel"
+                type="com.example.meetingapp.ViewModels.UserViewModel" />
+    </data>
+
     <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">

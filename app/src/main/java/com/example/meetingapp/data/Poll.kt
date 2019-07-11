@@ -2,9 +2,9 @@ package com.example.meetingapp.data
 
 import androidx.room.*
 
-@Entity(tableName = "polls",
+@Entity(tableName = "pollqs",
     foreignKeys = [ForeignKey(entity = Meeting::class, parentColumns = ["id"], childColumns = ["meeting_id"]), ForeignKey(entity = User::class, parentColumns = ["id"], childColumns = ["creator"])],
-    indices = [Index("meeting_id")])
+    indices = [Index("meeting_idw")])
 data class Poll (
     @PrimaryKey val id : Long,
     val question:String,
