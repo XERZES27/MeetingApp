@@ -7,9 +7,9 @@ import androidx.room.PrimaryKey
 @Entity(tableName = "meetings")
 data class Meeting (
         val description: String,
-    @PrimaryKey(autoGenerate = true) val id: Int,
-    val title: String,
-    val users: List<User>
+        @PrimaryKey(autoGenerate = true) val id: Int,
+        val title: String,
+        val users: List<User>
 
 
 )

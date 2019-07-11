@@ -88,4 +88,7 @@ dependencies {
     kapt "com.squareup.moshi:moshi-kotlin-codegen:$moshi_version"
 
     implementation "com.squareup.okhttp3:logging-interceptor:3.14.2"
+
+
+    kapt "com.android.databinding:compiler:3.1.3"
 }
