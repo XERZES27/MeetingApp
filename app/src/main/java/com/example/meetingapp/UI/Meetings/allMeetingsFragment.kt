@@ -53,7 +53,11 @@ class allMeetingsFragment : Fragment() {
 //        binding.setLifecycleOwner(this)
 //
 //        return binding.root
+
+
         return inflater.inflate(R.layout.all_meetings_fragment, container, false)
+
+
 
 
 
