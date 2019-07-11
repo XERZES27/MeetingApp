@@ -56,10 +56,13 @@ class UserViewModel(application:Application):AndroidViewModel(application){
 
     fun signIn(user: User) = viewModelScope.launch {
         _signin.postValue(userRepository.signIn(user))
+
     }
 
     fun signUp(user: User) = viewModelScope.launch {
-        _singup.postValue(userRepository.signUp(user))
+        val currentUser = userRepository.signUp(user)
+        _singup.postValue(currentUser)
+
     }
 
     suspend fun getAllUsers():LiveData<List<User>> =
