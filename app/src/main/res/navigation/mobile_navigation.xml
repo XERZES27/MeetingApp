@@ -14,14 +14,51 @@
             android:id="@+id/allMeetingsFragment"
             android:name="com.example.meetingapp.UI.Meetings.allMeetingsFragment"
             android:label="all_meetings_fragment"
-            tools:layout="@layout/all_meetings_fragment"/>
+            tools:layout="@layout/all_meetings_fragment">
+        <action
+                android:id="@+id/action_allMeetingsFragment_to_detailMeetingFragment2"
+                app:destination="@id/detailMeetingFragment"/>
+    </fragment>
     <fragment
             android:id="@+id/detailMeetingFragment"
             android:name="com.example.meetingapp.UI.Meetings.detailMeetingFragment"
             android:label="detail_meeting_fragment"
-            tools:layout="@layout/detail_meeting_fragment"/>
+            tools:layout="@layout/detail_meeting_fragment">
+        <action
+                android:id="@+id/action_detailMeetingFragment_to_userFrament"
+                app:destination="@id/userFrament"/>
+        <action
+                android:id="@+id/action_detailMeetingFragment_to_currentMeetingFragment"
+                app:destination="@id/currentMeetingFragment"/>
+    </fragment>
     <fragment
             android:id="@+id/settingFragment"
             android:name="com.example.meetingapp.UI.Meetings.SettingFragment"
             android:label="SettingFragment"/>
+    <fragment
+            android:id="@+id/signInFragment"
+            android:name="com.example.meetingapp.UI.Meetings.signInFragment"
+            android:label="sign_in_fragment"
+            tools:layout="@layout/sign_in_fragment">
+        <action
+                android:id="@+id/action_signInFragment_to_signUpFragment"
+                app:destination="@id/signUpFragment"/>
+        <action
+                android:id="@+id/action_signInFragment_to_allMeetingsFragment"
+                app:destination="@id/allMeetingsFragment"/>
+    </fragment>
+    <fragment
+            android:id="@+id/signUpFragment"
+            android:name="com.example.meetingapp.UI.Meetings.signUpFragment"
+            android:label="sign_up_fragment"
+            tools:layout="@layout/sign_up_fragment">
+        <action
+                android:id="@+id/action_signUpFragment_to_signInFragment"
+                app:destination="@id/signInFragment"/>
+    </fragment>
+    <fragment
+            android:id="@+id/userFrament"
+            android:name="com.example.meetingapp.UI.Meetings.userFrament"
+            android:label="user_frament_fragment"
+            tools:layout="@layout/user_frament_fragment"/>
 </navigation>

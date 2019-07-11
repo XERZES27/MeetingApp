@@ -8,8 +8,5 @@ import androidx.room.PrimaryKey
 data class Meeting (
         val description: String,
         @PrimaryKey(autoGenerate = true) val id: Int,
-        val title: String,
-        val users: List<User>
-
-
+        val title: String
 )

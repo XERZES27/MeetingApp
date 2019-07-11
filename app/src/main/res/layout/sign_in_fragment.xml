@@ -88,7 +88,7 @@
             android:text="Sign in"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/signip"
+            android:id="@+id/signin"
             app:layout_constraintStart_toStartOf="parent"
             style="@style/Platform.MaterialComponents.Light"
             android:layout_marginStart="8dp"
